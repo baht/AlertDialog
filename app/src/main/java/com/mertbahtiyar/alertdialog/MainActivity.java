@@ -15,7 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this, "Toast Message", Toast.LENGTH_LONG).show();
+        //Context
+
+        //Activity Context
+        //MainActivity.this
+
+        //App Context
+        //getApplicationContext()
+
+
+        Toast.makeText(this, "Toast Message", Toast.LENGTH_LONG).show();
     }
 
     public void save(View view){
@@ -27,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //save
-                Toast.makeText(MainActivity.this, "Saved", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
             }
         });
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
